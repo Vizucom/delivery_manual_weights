@@ -1,13 +1,13 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-#	* delivery_driver_info
+#	* delivery_manual_weights
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-04-26 09:49+0000\n"
-"PO-Revision-Date: 2017-04-26 09:49+0000\n"
+"POT-Creation-Date: 2017-04-26 10:36+0000\n"
+"PO-Revision-Date: 2017-04-26 10:36+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -15,13 +15,43 @@ msgstr ""
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
 
-#. module: delivery_driver_info
-#: field:stock.picking,driver:0
-msgid "Driver"
-msgstr "Kuljettaja"
+#. module: delivery_manual_weights
+#: help:stock.picking,weight_manual:0
+msgid "Manual gross weight"
+msgstr "Manuaalinen bruttopaino"
 
-#. module: delivery_driver_info
-#: model:ir.model,name:delivery_driver_info.model_stock_picking
+#. module: delivery_manual_weights
+#: help:stock.picking,weight_net_manual:0
+msgid "Manual net weight"
+msgstr "Manuaalinen nettopaino"
+
+#. module: delivery_manual_weights
+#: field:stock.picking,use_manual_weights:0
+msgid "Manual weights"
+msgstr "Syötä painot manuaalisesti"
+
+#. module: delivery_manual_weights
+#: field:stock.picking,weight_net_manual:0
+msgid "Net Weight (manual)"
+msgstr "Nettopaino (manuaalinen)"
+
+#. module: delivery_manual_weights
+#: model:ir.model,name:delivery_manual_weights.model_stock_picking
 msgid "Picking List"
 msgstr "Keräilyluettelo"
+
+#. module: delivery_manual_weights
+#: help:stock.picking,use_manual_weights:0
+msgid "Type in weights manually instead of having them calculated based on products."
+msgstr "Syötä brutto- ja nettopaino käsin sen sijaan, että ne laskettaisiin tuotteiden perusteella."
+
+#. module: delivery_manual_weights
+#: field:stock.picking,weight_manual:0
+msgid "Weight (manual)"
+msgstr "Paino (manuaalinen)"
+
+#. module: delivery_manual_weights
+#: view:stock.picking:delivery_manual_weights.stock_picking_form_inherit
+msgid "{'invisible': [('use_manual_weights', '=', True)]}"
+msgstr "{'invisible': [('use_manual_weights', '=', True)]}"
 
