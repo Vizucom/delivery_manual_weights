@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="stock_picking_form_inherit" model="ir.ui.view">
+            <field name="name">stock.picking.inherit</field>
+            <field name="model">stock.picking</field>
+            <field name="inherit_id" ref="delivery.view_picking_withcarrier_out_form"/>
+            <field name="arch" type="xml">
+
+                <label for="weight" position="attributes">
+                    <attribute name="attrs">{'invisible': [('use_manual_weights', '=', True)]}</attribute>
+                </label>
+
+                <field name="weight" position="attributes">
+                    <attribute name="attrs">{'invisible': [('use_manual_weights', '=', True)]}</attribute>
+                </field>
+
+                <field name="weight_uom_id" position="attributes">
+                    <attribute name="attrs">{'invisible': [('use_manual_weights', '=', True)]}</attribute>
+                </field>
+
+                <field name="weight_net" position="attributes">
+                    <attribute name="attrs">{'invisible': [('use_manual_weights', '=', True)]}</attribute>
+                </field>
+
+                <label for="weight" position="before">
+                    <field name="use_manual_weights"/>
+                </label>
+
+                <field name="number_of_packages" position="before">
+                    <field name="weight_manual" attrs="{'invisible': [('use_manual_weights', '=', False)]}"/>
+                    <field name="weight_net_manual" attrs="{'invisible': [('use_manual_weights', '=', False)]}"/>
+                </field>
+
+            </field>
+        </record>
+    </data>
+</openerp>
